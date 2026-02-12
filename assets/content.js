@@ -16,22 +16,29 @@ export default function Studio({ locale }) {
           rel="apple-touch-icon-precomposed"
           href="img/apple-touch-icon.png"
         />
+        <link rel="canonical" href={`https://herbstjohanna.com/${locale}`} />
         <meta http-equiv="content-language" content={locale} />
-        {locale !== "it" && (
-          <link
-            rel="alternate"
-            href="https://herbstjohanna.com/it"
-            hreflang="it"
-          />
-        )}
-        {locale !== "de" && (
-          <link
-            rel="alternate"
-            href="https://herbstjohanna.com/de"
-            hreflang="de"
-          />
-        )}
+        <link
+          rel="alternate"
+          href="https://herbstjohanna.com/de"
+          hreflang="de"
+        />
+        <link
+          rel="alternate"
+          href="https://herbstjohanna.com/it"
+          hreflang="it"
+        />
+        <link
+          rel="alternate"
+          href="https://herbstjohanna.com/de"
+          hreflang="x-default"
+        />
         <meta property="og:locale" content={locale} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={l.meta.title} />
+        <meta property="og:description" content={l.meta.description} />
+        <meta property="og:url" content={`https://herbstjohanna.com/${locale}`} />
+        <meta property="og:site_name" content="Kanzlei Herbst" />
         <meta name="description" content={l.meta.description} />
         <meta name="keywords" content={l.meta.keywords} />
         <script src="js/jquery.min.js"></script>
